@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt')
-const { use } = require('../routes/users');
 const Schema = mongoose.Schema;
 
 const userModel = new Schema({
