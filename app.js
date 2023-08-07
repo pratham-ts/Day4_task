@@ -2,7 +2,7 @@
 // -> signup, login -> DONE
 // -> only talent can signup by themselves -> DONE
 // ->Cd can’t signup, admin can signup behalf of them and set password for cd ->Done
-// -> Project creation can be done by cd
+// -> Project creation can be done by cd ->Done
 // -> Admin can update or delete the project (edited) 
 
 
