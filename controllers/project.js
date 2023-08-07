@@ -1,4 +1,5 @@
 const Project = require('../models/project')
+const { all } = require('../routes/talent')
 
 exports.createProject = async(req,res)=>{
     try{
@@ -42,5 +43,16 @@ exports.deleteProject = async(req,res)=>{
         return res.send({status:'success', message:'Project Deleted'})
     }catch(e){
         res.status(503).send({status:'failed', message:e.message})
+    }
+}
+
+exports.getProject = async(req,res)=>{
+    try{
+        const allProjects = await Project.find()
+        if(!allProjects) throw Error('No Current Projects')
+        return res.send({status:'sucess', message:allProjects})
+    }
+    catch(e){
+        return res.status(503).send({status:'failed', message: e.message})
     }
 }

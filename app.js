@@ -18,6 +18,7 @@ const auth = require('./middleware/auth')
 const talentRoutes = require('./routes/talent')
 const cdRoutes = require('./routes/cd')
 const adminRoutes = require('./routes/admin')
+const projectController = require('./controllers/project')
 
 const app = express()
 
@@ -34,6 +35,7 @@ app.use((req, res, next) => {
 });
 
 
+app.use('/',projectController.getProject)
 app.use('/talent',talentRoutes)
 app.use('/admin', adminRoutes)
 app.use('/cd',cdRoutes)
