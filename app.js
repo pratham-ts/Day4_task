@@ -34,12 +34,10 @@ app.use((req, res, next) => {
     next();
 });
 
-
-app.use('/',projectController.getProject)
 app.use('/talent',talentRoutes)
 app.use('/admin', adminRoutes)
 app.use('/cd',cdRoutes)
-
+app.use('/',projectController.getProject)
 
 mongoose.connect('mongodb+srv://pratham:c0At7haKCjB2wKq7@cluster0.hfa5lw3.mongodb.net/CN')
 .then(()=>{
